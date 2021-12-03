@@ -1,0 +1,13 @@
+
+name: Generate Index
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'README.md'
+jobs:
+  generate-index:
+    runs-on: node-latest
+    steps:
+      - run: "yarn global add markdown-index-generator"
